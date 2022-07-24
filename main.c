@@ -134,13 +134,24 @@ void reverse(){
   
 }
 
+void count(){
+  temp = head;
+  c = 0;
+  while(temp != 0){
+    c++;
+    temp = temp->next;
+    
+  }
+  printf("count: %d\n", c);
+}
+
 
 int main(void) {
   while(1){
     
   
   int choice;
-   printf("enter your choice\n 1.create\n 2.display\n 3.insert at begining\n 4.insertatend\n 5.insertatposition\n 6.deleteatbegin\n 7.deleteatend\n 8.deleteatposition\n 9.reverse");
+   printf("enter your choice\n 1.create\n 2.display\n 3.insert at begining\n 4.insertatend\n 5.insertatposition\n 6.deleteatbegin\n 7.deleteatend\n 8.deleteatposition\n 9.reverse\n 10.count");
    scanf("%d",&choice);
    switch(choice){
      case 1:
@@ -169,6 +180,9 @@ int main(void) {
         break;
      case 9:
         reverse();
+        break;
+     case 10:
+        count();
         break;
        }
     }
